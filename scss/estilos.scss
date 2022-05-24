@@ -1,0 +1,65 @@
+@import "reset";
+@import "variables";
+
+.masterContainer {
+  display: grid;
+  grid: {
+    template-rows: 6% 1fr 1fr 1fr 10% max-content;
+    template-columns: max-content max-content;
+    template-areas: "nav nav" "bienvenida bienvenida"
+      "resaltador01 resaltador01" "resaltador02 resaltador02"
+      "barraContacto barraContacto" "footer footer";
+    gap: 0px 40px;
+  }
+  align-content: center;
+  justify-content: center;
+
+  #NavbarB {
+    grid-area: nav;
+    background-color: $colorSecundario;
+    width: 100vw;
+  }
+
+  #contenedorInternoNavBar {
+    width: 100vw;
+  }
+}
+
+.containerInterno {
+  display: grid;
+  grid: {
+    template-columns: inherit;
+    gap: 30px;
+  }
+  align-content: center;
+  justify-content: center;
+}
+
+.textoBienvenida {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 15px 0px 60px;
+}
+
+.containerInterno01 {
+  grid-area: bienvenida;
+  margin: 80px 0px 120px;
+
+  .titulo01 {
+    width: 350px;
+  }
+}
+
+.videoContenedor {
+  display: flex;
+  height: max-content;
+  align-self: center;
+  justify-self: center;
+}
+
+.containerInterno02 {
+  grid-area: resaltador01;
+}
+
+/* Quedamos en el resaltador de la marca 01 */

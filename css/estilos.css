@@ -1,1 +1,105 @@
-/* No CSS */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: effra, sans-serif;
+  background-color: #f7f7f7;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.masterContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 6% 1fr 1fr 1fr 10% max-content;
+      grid-template-rows: 6% 1fr 1fr 1fr 10% -webkit-max-content;
+      grid-template-rows: 6% 1fr 1fr 1fr 10% max-content;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+      grid-template-areas: "nav nav" "bienvenida bienvenida" "resaltador01 resaltador01" "resaltador02 resaltador02" "barraContacto barraContacto" "footer footer";
+  grid-gap: 0px 40px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.masterContainer #NavbarB {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+  background-color: #f7f7f7;
+  width: 100vw;
+}
+
+.masterContainer #contenedorInternoNavBar {
+  width: 100vw;
+}
+
+.containerInterno {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: inherit;
+      grid-template-columns: inherit;
+  grid-gap: 30px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.textoBienvenida {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 15px 0px 60px;
+}
+
+.containerInterno01 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: bienvenida;
+  margin: 80px 0px 120px;
+}
+
+.containerInterno01 .titulo01 {
+  width: 350px;
+}
+
+.videoContenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+}
+
+.containerInterno02 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: resaltador01;
+}
+
+/* Quedamos en el resaltador de la marca 01 */
