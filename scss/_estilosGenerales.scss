@@ -10,11 +10,26 @@
   justify-content: center;
 }
 
+.titulo {
+  font-weight: map-get($fuentes, titulo);
+  font-size: 24pt;
+  max-width: 386px;
+  animation: up-to-down 0.8s ease-out;
+
+  @keyframes up-to-down {
+    0% {
+      transform: translateY(-30%);
+      color: rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: translateY(0%);
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
 .textoBienvenida {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0px 15px 0px 60px;
+  @include containerTitulos;
 }
 
 ul {
@@ -45,24 +60,6 @@ video {
   border-radius: 20px;
 }
 
-.titulo {
-  font-weight: $estiloTitulo;
-  font-size: 24pt;
-  max-width: 386px;
-  animation: up-to-down 0.8s ease-out;
-
-  @keyframes up-to-down {
-    0% {
-      transform: translateY(-30%);
-      color: rgba(0, 0, 0, 0);
-    }
-    100% {
-      transform: translateY(0%);
-      color: rgba(0, 0, 0, 1);
-    }
-  }
-}
-
 .parrafo {
   font-weight: $estiloParrafo;
   font-size: 12pt;
@@ -77,36 +74,28 @@ video {
   width: 340px;
 }
 
+.illustracionContenedor {
+  align-self: center;
+  justify-self: center;
+}
+
 .cta:link {
   background-color: $colorTerciario;
-  color: white;
+  color: $colorSecundario;
   padding: 18px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin-top: 30px;
   width: 12rem;
-  font-weight: 100;
+  font-weight: $estiloParrafo;
 }
 
 .cta:visited {
-  background-color: $colorTerciario;
-  color: white;
-  padding: 18px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  font-weight: $estiloParrafo;
+  @extend .cta:link;
 }
 
 .cta:hover {
+  @extend .cta:link;
   background-color: #4b4b4b;
-  color: $colorTerciario;
-  padding: 18px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  font-weight: $estiloParrafo;
 }
