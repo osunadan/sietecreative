@@ -1,15 +1,5 @@
 @import "variables";
 
-.containerInterno {
-  display: grid;
-  grid: {
-    template-columns: inherit;
-    gap: 30px;
-  }
-  align-content: center;
-  justify-content: center;
-}
-
 .titulo {
   font-weight: map-get($fuentes, titulo);
   font-size: 24pt;
@@ -29,7 +19,10 @@
 }
 
 .textoBienvenida {
-  @include containerTitulos;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 15px 0px 60px;
 }
 
 ul {
@@ -44,7 +37,7 @@ li {
 
 a {
   font-size: 1rem;
-  font-weight: $estiloBold;
+  font-weight: map-get($fuentes, bold);
   text-decoration: none;
 }
 
@@ -61,7 +54,7 @@ video {
 }
 
 .parrafo {
-  font-weight: $estiloParrafo;
+  font-weight: map-get($fuentes, parrafo);
   font-size: 12pt;
   max-width: 386px;
 }
@@ -80,15 +73,15 @@ video {
 }
 
 .cta:link {
-  background-color: $colorTerciario;
-  color: $colorSecundario;
+  background-color: map-get($colores, terciario);
+  color: map-get($colores, secundario);
   padding: 18px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin-top: 30px;
   width: 12rem;
-  font-weight: $estiloParrafo;
+  font-weight: map-get($fuentes, parrafo);
 }
 
 .cta:visited {

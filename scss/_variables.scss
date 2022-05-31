@@ -10,37 +10,11 @@ $colores: (
  terciario: #060606,
 )
 
-$fuenteBase: effra, sans-serif;
-$estiloTitulo: 400;
-$estiloParrafo: 100;
-$estiloBold: 700;
-$colorPrincipal: #ecc742;
-$colorSecundario: #f7f7f7;
-$colorTerciario: #060606;
-
-@mixin containerTitulos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0px 15px 0px 60px;
-}
-
-@mixin containerPrincipal {
+@mixin containerPrincipal($colums, $gap) {
   display: grid;
   grid: {
-    template-columns: max-content max-content;
-    gap: 0px 40px;
-  }
-  align-content: center;
-  justify-content: center;
-}
-
-@mixin containerInterno {
-  display: grid;
-  grid: {
-    template-columns: inherit;
-    gap: 30px;
-  }
-  align-content: center;
-  justify-content: center;
+    template-columns: $colums;
+    gap: $gap;}
+    align-content: center;
+    justify-content: center;
 }
