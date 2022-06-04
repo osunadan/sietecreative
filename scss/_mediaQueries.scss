@@ -43,6 +43,10 @@
     justify-content: center;
   }
 
+  .containerInterno06 {
+    grid-template-columns: 25rem;
+  }
+
   .casoDeExitoContenedor {
     grid-template-columns: max-content;
     justify-items: center;
@@ -103,6 +107,10 @@
       "resaltador02"
       "barraContacto"
       "footer";
+  }
+
+  .containerInterno06 {
+    grid-template-columns: 25rem;
   }
 
   .topbarContainer {

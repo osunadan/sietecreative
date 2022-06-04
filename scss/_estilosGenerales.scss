@@ -3,7 +3,7 @@
 .titulo {
   font-weight: map-get($fuentes, titulo);
   font-size: 24pt;
-  max-width: 386px;
+  max-width: 30rem;
   animation: up-to-down 0.8s ease-out;
 
   @keyframes up-to-down {
@@ -42,7 +42,7 @@ a {
 }
 
 a:link {
-  color: $colorTerciario;
+  color: map-get($colores, terciario);
 }
 
 a:visited {
@@ -55,7 +55,7 @@ video {
 
 .parrafo {
   font-weight: map-get($fuentes, parrafo);
-  font-size: 12pt;
+  font-size: 1rem;
   max-width: 386px;
 }
 

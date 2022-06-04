@@ -2,6 +2,7 @@
 @import "variables";
 @import "estilosGenerales";
 
+/*Barra de navegación*/
 .masterContainer {
   @include containerPrincipal(max-content max-content, 0px 40px);
   grid: {
@@ -12,11 +13,9 @@
   }
 }
 
-/*Barra de navegación*/
 #NavbarB {
   grid-area: nav;
-  background-color: map-get($colores, secundario);
-  width: 100vw;
+  background-color: map-get($colores, "secundario");
 }
 
 #contenedorInternoNavBar {
@@ -113,7 +112,7 @@
     .cta02:hover {
       @extend .cta02;
       color: map-get($colores, terciario);
-      background-color: $colorSecundario;
+      background-color: map-get($colores, secundario);
     }
   }
 }
@@ -148,7 +147,7 @@
 
     .mexico {
       color: map-get($colores, secundario) !important;
-      font-weight: $estiloParrafo;
+      font-weight: map-get($fuentes, parrafo);
       font-size: 16pt;
     }
 
@@ -161,7 +160,7 @@
 /* Pagina: Nuestro trabajo*/
 
 .masterContainerNuestroTrabajo {
-  @include containerPrincipal;
+  @include containerPrincipal(max-content max-content, 0px 40px);
   grid-template-rows: 12% 400px max-content 10% 12%;
   grid-template-areas:
     "nav nav"
@@ -177,9 +176,128 @@
 }
 
 .listaDeVideos {
-  @include containerPrincipal;
+  @include containerPrincipal(max-content max-content, 30px);
   grid-area: listaVideos;
   grid-gap: 20px;
+}
+
+/* Pagina: Resultados*/
+.masterContainerResultados {
+  @include containerPrincipal(max-content max-content, 0px 40px);
+  grid-template-rows: 110px 400px max-content max-content 13rem max-content;
+  grid-template-areas:
+    "nav nav"
+    "titulosResultados titulosResultados"
+    "casoExito01 casoExito01"
+    "casoExito02 casoExito02 "
+    "barraContacto barraContacto"
+    "footer footer";
+}
+
+.containerInterno05 {
+  @include containerPrincipal(inherit, 30px);
+  grid-area: titulosResultados;
+}
+
+.casoDeExitoContenedor01 {
+  @include containerPrincipal(max-content max-content, 20px);
+  grid-area: casoExito01;
+}
+
+.casoDeExitoContenedor02 {
+  @include containerPrincipal(max-content max-content, 20px);
+  grid-area: casoExito02;
+}
+
+/* Pagina: Quienes somos*/
+.masterContainerQuienesSomos {
+  @include containerPrincipal(22rem max-content, 0px 40px);
+  grid-template-rows: 110px 100vh 13rem max-content;
+  grid-template-areas:
+    "nav nav"
+    "quienesSomos quienesSomos"
+    "barraContacto barraContacto"
+    "footer footer";
+}
+
+.containerInterno06 {
+  @include containerPrincipal(inherit, 30px);
+  grid-area: quienesSomos;
+}
+
+.fotoTeam {
+  width: 100%;
+}
+
+#imagenTeam {
+  width: 100%;
+}
+
+/* Pagina: Contacto*/
+
+.masterContainerContacto {
+  @include containerPrincipal(max-content, 40px);
+  grid-template-rows: 110px 1000px;
+  grid-template-areas:
+    "nav"
+    "formulario";
+
+  .formularioContainer {
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+    .TituloContactoContainer {
+      background-color: map-get($colores, principal);
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 2rem 0rem;
+      padding: 5rem 5rem;
+    }
+
+    .tituloContacto {
+      margin: 2rem 0rem;
+      width: 60%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 5rem 0rem;
+      width: 28rem;
+    }
+
+    .formularioContainerInterno {
+      background-color: #ebebeb;
+      padding: 1rem 5rem;
+      border-radius: 1rem;
+      position: absolute;
+      top: 30rem;
+      display: flex;
+    }
+  }
+}
+
+#Item {
+  width: 100%;
+  margin: 0.5rem 0rem;
+}
+
+#labelStyle {
+  font-weight: map-get($fuentes, titulo);
+  font-size: 1rem;
+}
+
+.footerContainerContacto {
+  @extend .footerContainer;
+  position: fixed;
 }
 
 @import "mediaQueries";
