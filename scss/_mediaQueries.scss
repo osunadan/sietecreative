@@ -29,7 +29,7 @@
 
   .masterContainerResultados {
     display: grid;
-    grid-template-rows: 110px 515px max-content max-content 138px 140px;
+    grid-template-rows: 110px 42rem 70rem 70rem 7% 7%;
     grid-template-columns: max-content;
     grid-template-areas:
       "nav"
@@ -91,7 +91,25 @@
   }
 
   .masterContainerQuienesSomos {
-    grid-template-rows: 110px 140vh 150px max-content;
+    grid-template-rows: 110px 150vh 15rem;
+  }
+
+  .casoDeExitoContenedor01 {
+    grid-template-columns: max-content;
+  }
+
+  .casoDeExitoContenedor02 {
+    grid-template-columns: max-content;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .masterContainerContacto {
+    .formulario {
+      width: 15rem;
+    }
   }
 }
 
@@ -174,10 +192,6 @@
     padding: 0px 0px 15px 0px;
   }
 
-  .t02 {
-    font-size: 16pt;
-  }
-
   .conclusion {
     display: flex;
     padding: 0px 0px 0px 0px;
@@ -193,7 +207,11 @@
     font-size: 14pt;
   }
 
-  .parrafo03 {
-    font-size: 10pt;
+  .titulo {
+    text-align: center;
+  }
+
+  .cta02 {
+    width: 15em;
   }
 }

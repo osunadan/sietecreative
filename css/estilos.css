@@ -173,6 +173,7 @@ video {
   grid-template-columns: 1fr 1fr;
   background: #e9dcb4;
   background: linear-gradient(90deg, #e9dcb4 0%, #ecc042 48%, #eed078 100%);
+  width: 100vw;
 }
 
 .barraContactoConteiner .logoBarraContactoContenedor {
@@ -215,7 +216,7 @@ video {
   background-color: #060606;
   color: #f7f7f7;
   display: grid;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
 }
 
@@ -287,7 +288,7 @@ video {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 110px 400px max-content max-content 13rem max-content;
+  grid-template-rows: 110px 32rem 58rem 58rem 13rem max-content;
   grid-template-areas: "nav nav" "titulosResultados titulosResultados" "casoExito01 casoExito01" "casoExito02 casoExito02 " "barraContacto barraContacto" "footer footer";
 }
 
@@ -316,6 +317,13 @@ video {
   align-content: center;
   justify-content: center;
   grid-area: casoExito02;
+}
+
+.textoCaso {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 /* Pagina: Quienes somos*/
@@ -353,7 +361,7 @@ video {
   grid-gap: 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 110px 1000px;
+  grid-template-rows: 110px 100vh;
   grid-template-areas: "nav" "formulario";
 }
 
@@ -362,36 +370,37 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.masterContainerContacto .formularioContainer .TituloContactoContainer {
+.masterContainerContacto .TituloContactoContainer {
   background-color: #ecc742;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin: 2rem 0rem;
   padding: 5rem 5rem;
 }
 
-.masterContainerContacto .formularioContainer .tituloContacto {
+.masterContainerContacto .tituloContacto {
   margin: 2rem 0rem;
+  width: 60%;
 }
 
-.masterContainerContacto .formularioContainer form {
+.masterContainerContacto form {
   display: flex;
   flex-direction: column;
   margin: 5rem 0rem;
   width: 28rem;
 }
 
-.masterContainerContacto .formularioContainer .formularioContainerInterno {
+.masterContainerContacto .formularioContainerInterno {
   background-color: #ebebeb;
   padding: 1rem 5rem;
   border-radius: 1rem;
-  position: absolute;
-  top: 30rem;
   display: flex;
 }
 
@@ -407,6 +416,7 @@ video {
 
 .footerContainerContacto {
   position: fixed;
+  bottom: 0;
 }
 
 @media all and (max-width: 955px) {
@@ -427,7 +437,7 @@ video {
   }
   .masterContainerResultados {
     display: grid;
-    grid-template-rows: 110px 515px max-content max-content 138px 140px;
+    grid-template-rows: 110px 42rem 70rem 70rem 7% 7%;
     grid-template-columns: max-content;
     grid-template-areas: "nav" "titulosResultados" "casoExito01" "casoExito02 " "barraContacto" "footer";
     grid-gap: 0px;
@@ -471,7 +481,19 @@ video {
     grid-template-columns: max-content;
   }
   .masterContainerQuienesSomos {
-    grid-template-rows: 110px 140vh 150px max-content;
+    grid-template-rows: 110px 150vh 15rem;
+  }
+  .casoDeExitoContenedor01 {
+    grid-template-columns: max-content;
+  }
+  .casoDeExitoContenedor02 {
+    grid-template-columns: max-content;
+  }
+  .titulo {
+    text-align: center;
+  }
+  .masterContainerContacto .formulario {
+    width: 15rem;
   }
 }
 
@@ -531,9 +553,6 @@ video {
   .textoBarraContacto {
     padding: 0px 0px 15px 0px;
   }
-  .t02 {
-    font-size: 16pt;
-  }
   .conclusion {
     display: flex;
     padding: 0px 0px 0px 0px;
@@ -546,7 +565,10 @@ video {
   .mexico {
     font-size: 14pt;
   }
-  .parrafo03 {
-    font-size: 10pt;
+  .titulo {
+    text-align: center;
+  }
+  .cta02, .barraContactoConteiner .textoBarraContacto .cta02:visited, .barraContactoConteiner .textoBarraContacto .cta02:hover {
+    width: 15em;
   }
 }

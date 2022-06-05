@@ -75,6 +75,7 @@
     rgba(236, 192, 66, 1) 48%,
     rgba(238, 208, 120, 1) 100%
   );
+  width: 100vw;
 
   .logoBarraContactoContenedor {
     display: flex;
@@ -122,7 +123,7 @@
   background-color: map-get($colores, terciario);
   color: map-get($colores, secundario);
   display: grid;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
 
   .socialMediaEnlaces {
@@ -184,7 +185,7 @@
 /* Pagina: Resultados*/
 .masterContainerResultados {
   @include containerPrincipal(max-content max-content, 0px 40px);
-  grid-template-rows: 110px 400px max-content max-content 13rem max-content;
+  grid-template-rows: 110px 32rem 58rem 58rem 13rem max-content;
   grid-template-areas:
     "nav nav"
     "titulosResultados titulosResultados"
@@ -207,6 +208,13 @@
 .casoDeExitoContenedor02 {
   @include containerPrincipal(max-content max-content, 20px);
   grid-area: casoExito02;
+}
+
+.textoCaso {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 /* Pagina: Quienes somos*/
@@ -237,7 +245,7 @@
 
 .masterContainerContacto {
   @include containerPrincipal(max-content, 40px);
-  grid-template-rows: 110px 1000px;
+  grid-template-rows: 110px 100vh;
   grid-template-areas:
     "nav"
     "formulario";
@@ -251,37 +259,34 @@
     height: 100%;
   }
 
-    .TituloContactoContainer {
-      background-color: map-get($colores, principal);
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin: 2rem 0rem;
-      padding: 5rem 5rem;
-    }
+  .TituloContactoContainer {
+    background-color: map-get($colores, principal);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;
+    padding: 5rem 5rem;
+  }
 
-    .tituloContacto {
-      margin: 2rem 0rem;
-      width: 60%;
-    }
+  .tituloContacto {
+    margin: 2rem 0rem;
+    width: 60%;
+  }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      margin: 5rem 0rem;
-      width: 28rem;
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0rem;
+    width: 28rem;
+  }
 
-    .formularioContainerInterno {
-      background-color: #ebebeb;
-      padding: 1rem 5rem;
-      border-radius: 1rem;
-      position: absolute;
-      top: 30rem;
-      display: flex;
-    }
+  .formularioContainerInterno {
+    background-color: #ebebeb;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    display: flex;
   }
 }
 
@@ -298,6 +303,7 @@
 .footerContainerContacto {
   @extend .footerContainer;
   position: fixed;
+  bottom: 0;
 }
 
 @import "mediaQueries";
