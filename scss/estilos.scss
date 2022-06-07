@@ -162,7 +162,7 @@
 
 .masterContainerNuestroTrabajo {
   @include containerPrincipal(max-content max-content, 0px 40px);
-  grid-template-rows: 12% 400px max-content 10% 12%;
+  grid-template-rows: 22% 400px 60% 12% 12%;
   grid-template-areas:
     "nav nav"
     "titulosTrabajos titulosTrabajos"

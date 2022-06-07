@@ -43,6 +43,10 @@
     justify-content: center;
   }
 
+  .masterContainerContacto {
+    grid-template-rows: 110px 130vh;
+  }
+
   .containerInterno06 {
     grid-template-columns: 25rem;
   }

@@ -258,7 +258,7 @@ video {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 12% 400px max-content 10% 12%;
+  grid-template-rows: 22% 400px 60% 12% 12%;
   grid-template-areas: "nav nav" "titulosTrabajos titulosTrabajos" "listaVideos listaVideos" "barraContacto barraContacto" "footer footer";
 }
 
@@ -443,6 +443,9 @@ video {
     grid-gap: 0px;
     align-content: center;
     justify-content: center;
+  }
+  .masterContainerContacto {
+    grid-template-rows: 110px 130vh;
   }
   .containerInterno06 {
     grid-template-columns: 25rem;
