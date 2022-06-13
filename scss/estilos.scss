@@ -6,7 +6,7 @@
 .masterContainer {
   @include containerPrincipal(max-content max-content, 0px 40px);
   grid: {
-    template-rows: 6% 1fr 1fr 1fr 10% max-content;
+    template-rows: 10em 40em 40em 40em 10% max-content;
     template-areas: "nav nav" "bienvenida bienvenida"
       "resaltador01 resaltador01" "resaltador02 resaltador02"
       "barraContacto barraContacto" "footer footer";
@@ -16,10 +16,7 @@
 #NavbarB {
   grid-area: nav;
   background-color: map-get($colores, "secundario");
-}
-
-#contenedorInternoNavBar {
-  width: 100vw;
+  margin: 0;
 }
 
 /* Mensaje de bienvenida */
@@ -182,6 +179,70 @@
   grid-gap: 20px;
 }
 
+/* Pagina: Nuestro trabajo II*/
+.portfolioContainer {
+  width: 80%;
+  margin: 80px auto;
+  grid-area: listaVideos;
+
+  .fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .columna {
+    flex-basis: 90em;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    background: #f7f7f7;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30%;
+  }
+
+  .small-img {
+    position: relative;
+  }
+
+  .imagenPreview {
+    width: 500px;
+  }
+}
+
+.play-btn {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.video-player {
+  @extend .play-btn;
+  width: 60%;
+  cursor: auto;
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  cursor: pointer;
+}
+
 /* Pagina: Resultados*/
 .masterContainerResultados {
   @include containerPrincipal(max-content max-content, 0px 40px);
@@ -272,7 +333,6 @@
 
   .tituloContacto {
     margin: 2rem 0rem;
-    width: 60%;
   }
 
   form {

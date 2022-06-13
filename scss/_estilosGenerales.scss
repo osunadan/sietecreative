@@ -3,7 +3,6 @@
 .titulo {
   font-weight: map-get($fuentes, titulo);
   font-size: 24pt;
-  max-width: 30rem;
   animation: up-to-down 0.8s ease-out;
 
   @keyframes up-to-down {
@@ -23,6 +22,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 0px 15px 0px 60px;
+  max-width: 30rem;
 }
 
 ul {

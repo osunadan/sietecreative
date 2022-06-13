@@ -8,13 +8,11 @@
 body {
   font-family: effra, sans-serif;
   background-color: #f7f7f7;
-  height: max-content;
 }
 
 .titulo {
   font-weight: 400;
   font-size: 24pt;
-  max-width: 30rem;
   animation: up-to-down 0.8s ease-out;
 }
 
@@ -34,6 +32,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0px 15px 0px 60px;
+  max-width: 30rem;
 }
 
 ul {
@@ -106,17 +105,14 @@ video {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 6% 1fr 1fr 1fr 10% max-content;
+  grid-template-rows: 10em 40em 40em 40em 10% max-content;
   grid-template-areas: "nav nav" "bienvenida bienvenida" "resaltador01 resaltador01" "resaltador02 resaltador02" "barraContacto barraContacto" "footer footer";
 }
 
 #NavbarB {
   grid-area: nav;
   background-color: #f7f7f7;
-}
-
-#contenedorInternoNavBar {
-  width: 100vw;
+  margin: 0;
 }
 
 /* Mensaje de bienvenida */
@@ -281,6 +277,69 @@ video {
   grid-gap: 20px;
 }
 
+/* Pagina: Nuestro trabajo II*/
+.portfolioContainer {
+  width: 80%;
+  margin: 80px auto;
+  grid-area: listaVideos;
+}
+
+.portfolioContainer .fila {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolioContainer .columna {
+  flex-basis: 90em;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolioContainer .content-container {
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  margin: 20px 0;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 30%;
+}
+
+.portfolioContainer .small-img {
+  position: relative;
+}
+
+.portfolioContainer .imagenPreview {
+  width: 500px;
+}
+
+.play-btn, .video-player {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.video-player {
+  width: 60%;
+  cursor: auto;
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  cursor: pointer;
+}
+
 /* Pagina: Resultados*/
 .masterContainerResultados {
   display: grid;
@@ -387,7 +446,6 @@ video {
 
 .masterContainerContacto .tituloContacto {
   margin: 2rem 0rem;
-  width: 60%;
 }
 
 .masterContainerContacto form {
@@ -469,6 +527,8 @@ video {
   .textoBienvenida {
     align-items: center;
     margin: 0px 0px 0px 0px;
+    max-width: 28rem;
+    justify-self: center;
   }
   p {
     text-align: center;
