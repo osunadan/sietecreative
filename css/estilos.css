@@ -3,11 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-family: effra, sans-serif;
   background-color: #f7f7f7;
+  display: border-box;
+  width: 100vw;
 }
 
 .titulo {
@@ -123,7 +126,6 @@ video {
   align-content: center;
   justify-content: center;
   grid-area: bienvenida;
-  margin: 80px 0px 120px;
 }
 
 .videoBienvenida {
@@ -212,7 +214,6 @@ video {
   background-color: #060606;
   color: #f7f7f7;
   display: grid;
-  width: 100%;
   justify-content: center;
 }
 
@@ -250,34 +251,23 @@ video {
 /* Pagina: Nuestro trabajo*/
 .masterContainerNuestroTrabajo {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: none;
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 22% 400px 60% 12% 12%;
+  grid-template-rows: 7rem 35rem 50rem 14rem 14rem;
   grid-template-areas: "nav nav" "titulosTrabajos titulosTrabajos" "listaVideos listaVideos" "barraContacto barraContacto" "footer footer";
 }
 
 .containerInterno04 {
   display: grid;
-  grid-template-columns: inherit;
+  grid-template-columns: max-content max-content;
   grid-gap: 30px;
   align-content: center;
   justify-content: center;
   grid-area: titulosTrabajos;
 }
 
-.listaDeVideos {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-gap: 30px;
-  align-content: center;
-  justify-content: center;
-  grid-area: listaVideos;
-  grid-gap: 20px;
-}
-
-/* Pagina: Nuestro trabajo II*/
 .portfolioContainer {
   width: 80%;
   margin: 80px auto;
@@ -292,33 +282,35 @@ video {
 }
 
 .portfolioContainer .columna {
-  flex-basis: 90em;
+  flex-basis: 100em;
   min-width: 250px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .portfolioContainer .content-container {
   display: flex;
   flex-direction: column;
-  background: #f7f7f7;
   margin: 20px 0;
   align-items: center;
   border-radius: 15px;
   overflow: hidden;
-  width: 30%;
+  width: 14%;
 }
 
 .portfolioContainer .small-img {
   position: relative;
+  border-radius: 15px;
+  width: 14rem;
 }
 
 .portfolioContainer .imagenPreview {
-  width: 500px;
+  width: 300px;
 }
 
 .play-btn, .video-player {
-  width: 100px;
+  width: 70px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -326,10 +318,23 @@ video {
   cursor: pointer;
 }
 
+.tituloVideos, .subtituloVideos {
+  font-weight: 400;
+  font-size: 18pt;
+  margin: 10px 10px;
+  align-self: flex-start;
+}
+
+.subtituloVideos {
+  font-weight: 100;
+  font-size: 16pt;
+}
+
 .video-player {
   width: 60%;
   cursor: auto;
   display: none;
+  position: fixed;
 }
 
 .close-btn {
@@ -392,7 +397,7 @@ video {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 110px 100vh 13rem max-content;
+  grid-template-rows: 7rem 65vh 13rem max-content;
   grid-template-areas: "nav nav" "quienesSomos quienesSomos" "barraContacto barraContacto" "footer footer";
 }
 
@@ -403,10 +408,13 @@ video {
   align-content: center;
   justify-content: center;
   grid-area: quienesSomos;
+  align-self: flex-start;
+  margin: 5rem 0;
 }
 
 .fotoTeam {
   width: 100%;
+  border-radius: 20px;
 }
 
 #imagenTeam {
@@ -472,9 +480,27 @@ video {
   font-size: 1rem;
 }
 
+.ContainerFooterContacto {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+}
+
 .footerContainerContacto {
   position: fixed;
   bottom: 0;
+  width: 100vw;
+  height: 9%;
+}
+
+.tituloFooterContacto {
+  font-weight: 700;
+  font-size: 14pt;
+  margin: 5px 0;
+}
+
+.parrafoFooterContacto {
+  font-weight: 100;
 }
 
 @media all and (max-width: 955px) {
@@ -486,8 +512,8 @@ video {
   }
   .masterContainerNuestroTrabajo {
     display: grid;
-    grid-template-rows: 100px 500px max-content max-content max-content;
-    grid-template-columns: max-content;
+    grid-template-rows: 100px 500px max-content 14rem 14rem;
+    grid-template-columns: none;
     grid-template-areas: "nav" "titulosTrabajos" "listaVideos" "barraContacto" "footer";
     grid-gap: 0px 40px;
     align-content: center;
@@ -502,8 +528,11 @@ video {
     align-content: center;
     justify-content: center;
   }
+  .masterContainerQuienesSomos {
+    grid-template-rows: 110px 100vh 15rem;
+  }
   .masterContainerContacto {
-    grid-template-rows: 110px 130vh;
+    grid-template-rows: 110px 100vh;
   }
   .containerInterno06 {
     grid-template-columns: 25rem;
@@ -543,9 +572,6 @@ video {
   .containerInterno {
     grid-template-columns: max-content;
   }
-  .masterContainerQuienesSomos {
-    grid-template-rows: 110px 150vh 15rem;
-  }
   .casoDeExitoContenedor01 {
     grid-template-columns: max-content;
   }
@@ -554,16 +580,41 @@ video {
   }
   .titulo {
     text-align: center;
+    max-width: 22rem;
   }
   .masterContainerContacto .formulario {
     width: 15rem;
+  }
+  .portfolioContainer .columna {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolioContainer .content-container {
+    width: 45%;
+  }
+  .video-player {
+    width: 94%;
+    position: fixed;
+  }
+  .tituloVideos, .subtituloVideos {
+    align-self: center;
+  }
+  .parrafoFooterContacto {
+    font-size: 8pt;
+    max-width: 20rem;
+  }
+  .ContainerFooterContacto {
+    width: 20rem;
+  }
+  .containerInterno04 {
+    grid-template-columns: none;
   }
 }
 
 @media all and (max-width: 600px) {
   .masterContainer {
     display: grid;
-    grid-template-rows: 94px 575px 575px 575px 8% 185px;
+    grid-template-rows: 94px 575px 575px 575px 10% 195px;
     grid-template-columns: 1fr;
     grid-template-areas: "nav" "bienvenida" "resaltador01" "resaltador02" "barraContacto" "footer";
   }
@@ -633,5 +684,8 @@ video {
   }
   .cta02, .barraContactoConteiner .textoBarraContacto .cta02:visited, .barraContactoConteiner .textoBarraContacto .cta02:hover {
     width: 15em;
+  }
+  .portfolioContainer .content-container {
+    width: 80%;
   }
 }

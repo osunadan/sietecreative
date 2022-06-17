@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Trabajos destacados de Siete Creative</title>
  <meta name="description"
-  content="Preview de nuestros trabajos más destacados los cuales han servido a nuestros clientes para  lograr efectivamente su comunicación y alcanzar a sus potenciales clientes">
+  content="Preview de nuestros trabajos más destacados, los cuales han servido a nuestros clientes para lograr efectivamente su comunicación y alcanzar a sus potenciales clientes">
  <link rel="stylesheet" href="https://use.typekit.net/rxb5wgu.css">
  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,11 +16,11 @@
 <body>
  <div class="masterContainerNuestroTrabajo">
   <!--Navbar hecha con bootstrap-->
-  <div id="NavbarB" class="container-fluid fixed-top">
+  <div id="NavbarB" class="container-fluid fixed-top row">
    <nav id="contenedorNavB" class="navbar navbar-expand-lg">
     <div id="contenedorInternoNavBar" class="container-fluid">
      <a class="navbar-brand" href="../index.html">
-      <img src="../images/logo.png" alt="" width="80">
+      <img src="../images/logo.png" alt="Logo de Siete Creative Studio" width="80">
      </a>
      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-lg-0">
        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="pages/nuestro-trabajo.html">Nuestro trabajo</a>
+        <a class="nav-link active" aria-current="page" href="nuestro-trabajo.html">Nuestro trabajo</a>
        </li>
        <li class="nav-item">
         <a class="nav-link" href="/pages/resultados.html">Resultados</a>
@@ -49,25 +49,92 @@
   <!--Titulo-->
   <div class="containerInterno04">
    <div class="textoBienvenida">
-    <h2 class="titulo">Encuentra el estilo adecuado para tu video.</h2>
+    <h2 class="titulo">Encuentra el estilo adecuado para tu video</h2>
     <p class="parrafo">Aquí puede encontrar una lista con nuestros trabajos realizados en motion graphics,
-     producción audiovisual. Deja fluir tu creatividad para tu proyecto.</p>
+     producción audiovisual. Deja fluir tu creatividad para tu proyecto</p>
    </div>
    <div class="illustracionContenedor">
     <img class="illustracion" src="../media/videos-illustration.svg"
-     alt="Ilustración que representa nuestro equipo de trabajo">
+     alt="Ilustración que representa una galeria de videos">
    </div>
   </div>
   <!--Lista de videos-->
-  <div class="listaDeVideos">
-   <video class="videoBienvenida" src="../media/Finnosummit-Connect.mp4" loop muted controls></video>
-   <video class="videoBienvenida" src="../media/The-Collective-Talks -Season-01.mp4" loop muted controls></video>
-   <video class="videoBienvenida" src="../media/Hot-Sale-2019.mp4" loop muted controls></video>
-   <video class="videoBienvenida" src="../media/Transferencias-A-Cualquier-Banco.mp4" loop muted controls></video>
-   <video class="videoBienvenida" src="../media/Hacer-Con-Mibo.mp4" loop muted controls></video>
-   <video class="videoBienvenida" src="../media/Weex-Wallet.mp4" loop muted controls></video>
-  </div>
+  <div class="portfolioContainer">
+   <div class="fila">
+    <div class="columna">
+     <!--Ficha 01-->
+     <div class="content-container">
+      <div class="small-img">
+       <img class="imagenPreview" src="../images/Preview-Videos/Preview01_01.png" alt="Preview del primer video">
+       <img src="../media/Icon-play.svg" alt="" class="play-btn"
+        onclick="playVideo('../media/Video-Portafolio-01.mp4')">
+      </div>
+      <p class="tituloVideos">Finnovista</p>
+      <p class="subtituloVideos">Video recap de su evento Finnosummit Connect 2021</p>
 
+     </div>
+     <!--Ficha 02-->
+     <div class="content-container">
+      <div class="small-img">
+       <img class="imagenPreview" src="../images/Preview-Videos/Preview02_01.png" alt="Preview del primer video">
+       <img src="../media/Icon-play.svg" alt="" class="play-btn"
+        onclick="playVideo('../media/Video-Portafolio-02.mp4')">
+      </div>
+      <p class="tituloVideos">Collective Talks - Season 1</p>
+      <p class="subtituloVideos">Video recap de la primera temporada del podcast Collective Talks para Collective
+       Academy</p>
+     </div>
+     <!--Ficha 03-->
+     <div class="content-container">
+      <div class="small-img">
+       <img class="imagenPreview" src="../images/Preview-Videos/Preview03_01.png" alt="Preview del primer video">
+       <img src="../media/Icon-play.svg" alt="" class="play-btn"
+        onclick="playVideo('../media/Video-Portafolio-03.mp4')">
+      </div>
+      <p class="tituloVideos">Hot Sale 2019</p>
+      <p class="subtituloVideos">Video publicitario para la campaña de Hot Sale de Mibo</p>
+     </div>
+     <!--Ficha 04-->
+     <div class="content-container">
+      <div class="small-img">
+       <img class="imagenPreview" src="../images/Preview-Videos/Preview04_01.png" alt="Preview del primer video">
+       <img src="../media/Icon-play.svg" alt="" class="play-btn"
+        onclick="playVideo('../media/Video-Portafolio-04.mp4')">
+      </div>
+      <p class="tituloVideos">Transferencias a cualquier banco</p>
+      <p class="subtituloVideos">Explainer video para Mibo como parte de su campaña de tutoriales, donde explican las
+       funcionalidades de su app</p>
+     </div>
+     <!--Ficha 05-->
+     <div class="content-container">
+      <div class="small-img">
+       <img class="imagenPreview" src="../images/Preview-Videos/Preview05_01.png" alt="Preview del primer video">
+       <img src="../media/Icon-play.svg" alt="" class="play-btn"
+        onclick="playVideo('../media/Video-Portafolio-05.mp4')">
+      </div>
+      <p class="tituloVideos">¿Qué puedes hacer con Mibo?</p>
+      <p class="subtituloVideos">Video publicitario promocionando las funcionalidades de la app de Mibo</p>
+     </div>
+     <!--Ficha 06-->
+     <div class="content-container">
+      <div class="small-img">
+       <img class="imagenPreview" src="../images/Preview-Videos/Preview06_01.png" alt="Preview del primer video">
+       <img src="../media/Icon-play.svg" alt="" class="play-btn"
+        onclick="playVideo('../media/Video-Portafolio-06.mp4')">
+      </div>
+      <p class="tituloVideos">Weex Wallet</p>
+      <p class="subtituloVideos">Video publicitario para Weex Wallet mostrando las bondades de su producto</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--Video Player-->
+  <div class="video-player" id="videoPlayer">
+   <video width="100%" controls id="myVideo">
+    <source src="../media/Video-Portafolio-01.mp4" type="video/mp4">
+   </video>
+   <img src="../media/Icon-close.svg" alt="" class="close-btn" onclick="stopVideo()" id="closeVideo">
+  </div>
   <!--Footer-->
   <div class="barraContactoConteiner">
    <div class="logoBarraContactoContenedor">
@@ -77,8 +144,8 @@
     <p class="titulo t02">
      ¿Tienes dudas?
     </p>
-    <p class="parrafo parrafo02">aun mejor</p>
-    <a class="cta02" href="mailto:7creativeinfo@gmail.com" target="_blank">Escribenos</a>
+    <p class="parrafo parrafo02">Aun mejor</p>
+    <a class="cta02" href="contacto.html">Escríbenos</a>
    </div>
   </div>
   <div class="footerContainer">
@@ -89,13 +156,12 @@
    </div>
    <div class="conclusion">
     <p class="mexico">México</p>
-    <p class="parrafo parrafo03">Lorem ipsum dolor sit amet consectetur adipisicing elit.Ipsam quas reprehenderit
-     minima
-     illum.</p>
+    <p class="parrafo">© 2020–2022 Siete Creative Studio</p>
    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  <script src="../scripts/botones.js"></script>
 </body>
 
 </html>

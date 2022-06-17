@@ -24,7 +24,6 @@
 .containerInterno01 {
   @include containerPrincipal(inherit, 30px);
   grid-area: bienvenida;
-  margin: 80px 0px 120px;
 }
 
 .videoBienvenida {
@@ -120,7 +119,6 @@
   background-color: map-get($colores, terciario);
   color: map-get($colores, secundario);
   display: grid;
-  width: 100%;
   justify-content: center;
 
   .socialMediaEnlaces {
@@ -158,8 +156,8 @@
 /* Pagina: Nuestro trabajo*/
 
 .masterContainerNuestroTrabajo {
-  @include containerPrincipal(max-content max-content, 0px 40px);
-  grid-template-rows: 22% 400px 60% 12% 12%;
+  @include containerPrincipal(none, 0px 40px);
+  grid-template-rows: 7rem 35rem 50rem 14rem 14rem;
   grid-template-areas:
     "nav nav"
     "titulosTrabajos titulosTrabajos"
@@ -169,17 +167,10 @@
 }
 
 .containerInterno04 {
-  @include containerPrincipal(inherit, 30px);
+  @include containerPrincipal(max-content max-content, 30px);
   grid-area: titulosTrabajos;
 }
 
-.listaDeVideos {
-  @include containerPrincipal(max-content max-content, 30px);
-  grid-area: listaVideos;
-  grid-gap: 20px;
-}
-
-/* Pagina: Nuestro trabajo II*/
 .portfolioContainer {
   width: 80%;
   margin: 80px auto;
@@ -193,34 +184,36 @@
   }
 
   .columna {
-    flex-basis: 90em;
+    flex-basis: 100em;
     min-width: 250px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 
   .content-container {
     display: flex;
     flex-direction: column;
-    background: #f7f7f7;
     margin: 20px 0;
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
-    width: 30%;
+    width: 14%;
   }
 
   .small-img {
     position: relative;
+    border-radius: 15px;
+    width: 14rem;
   }
 
   .imagenPreview {
-    width: 500px;
+    width: 300px;
   }
 }
 
 .play-btn {
-  width: 100px;
+  width: 70px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -228,11 +221,25 @@
   cursor: pointer;
 }
 
+.tituloVideos {
+  font-weight: map-get($fuentes, titulo);
+  font-size: 18pt;
+  margin: 10px 10px;
+  align-self: flex-start;
+}
+
+.subtituloVideos {
+  @extend .tituloVideos;
+  font-weight: map-get($fuentes, parrafo);
+  font-size: 16pt;
+}
+
 .video-player {
   @extend .play-btn;
   width: 60%;
   cursor: auto;
   display: none;
+  position: fixed;
 }
 
 .close-btn {
@@ -281,7 +288,7 @@
 /* Pagina: Quienes somos*/
 .masterContainerQuienesSomos {
   @include containerPrincipal(22rem max-content, 0px 40px);
-  grid-template-rows: 110px 100vh 13rem max-content;
+  grid-template-rows: 7rem 65vh 13rem max-content;
   grid-template-areas:
     "nav nav"
     "quienesSomos quienesSomos"
@@ -292,10 +299,13 @@
 .containerInterno06 {
   @include containerPrincipal(inherit, 30px);
   grid-area: quienesSomos;
+  align-self: flex-start;
+  margin: 5rem 0;
 }
 
 .fotoTeam {
   width: 100%;
+  border-radius: 20px;
 }
 
 #imagenTeam {
@@ -360,10 +370,28 @@
   font-size: 1rem;
 }
 
+.ContainerFooterContacto {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+}
+
 .footerContainerContacto {
   @extend .footerContainer;
   position: fixed;
   bottom: 0;
+  width: 100vw;
+  height: 9%;
+}
+
+.tituloFooterContacto {
+  font-weight: map-get($fuentes, bold);
+  font-size: 14pt;
+  margin: 5px 0;
+}
+
+.parrafoFooterContacto {
+  font-weight: map-get($fuentes, parrafo);
 }
 
 @import "mediaQueries";
