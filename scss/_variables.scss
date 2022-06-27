@@ -9,13 +9,3 @@ $colores: (
   secundario: #f7f7f7,
   terciario: #060606,
 );
-
-@mixin containerPrincipal($colums, $gap) {
-  display: grid;
-  grid: {
-    template-columns: $colums;
-    gap: $gap;
-  }
-  align-content: center;
-  justify-content: center;
-}

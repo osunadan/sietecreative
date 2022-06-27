@@ -1,213 +1,14 @@
-@media all and (max-width: 955px) {
-  .masterContainer {
-    display: grid;
-    grid-template-rows: 155px 575px 575px 575px 8% 10%;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nav"
-      "bienvenida"
-      "resaltador01"
-      "resaltador02"
-      "barraContacto"
-      "footer";
-  }
-
-  .masterContainerNuestroTrabajo {
-    display: grid;
-    grid-template-rows: 100px 500px max-content 14rem 14rem;
-    grid-template-columns: none;
-    grid-template-areas:
-      "nav"
-      "titulosTrabajos"
-      "listaVideos"
-      "barraContacto"
-      "footer";
-    grid-gap: 0px 40px;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .masterContainerResultados {
-    display: grid;
-    grid-template-rows: 110px 42rem 70rem 70rem 7% 7%;
-    grid-template-columns: max-content;
-    grid-template-areas:
-      "nav"
-      "titulosResultados"
-      "casoExito01"
-      "casoExito02 "
-      "barraContacto"
-      "footer";
-    grid-gap: 0px;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .masterContainerQuienesSomos {
-    grid-template-rows: 110px 100vh 15rem;
-  }
-
-  .masterContainerContacto {
-    grid-template-rows: 110px 100vh;
-  }
-
-  .containerInterno06 {
-    grid-template-columns: 25rem;
-  }
-
-  .casoDeExitoContenedor {
-    grid-template-columns: max-content;
-    justify-items: center;
-  }
-
-  .videoBienvenida {
-    order: -1;
-  }
-
-  .topbarContainer {
-    grid-template-columns: max-content 1fr;
-  }
-
-  #siteid {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .nav {
-    margin-left: 0px;
-  }
-
-  .textoBienvenida {
-    align-items: center;
-    margin: 0px 0px 0px 0px;
-    max-width: 28rem;
-    justify-self: center;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .listaDeVideos {
-    grid-template-columns: max-content;
-    margin: 80px 0px 88px 0px;
-  }
-
-  iframe {
-    width: 680px;
-  }
-
-  .containerInterno {
-    grid-template-columns: max-content;
-  }
-
-  .casoDeExitoContenedor01 {
-    grid-template-columns: max-content;
-  }
-
-  .casoDeExitoContenedor02 {
-    grid-template-columns: max-content;
-  }
-
-  .titulo {
-    text-align: center;
-    max-width: 22rem;
-  }
-
-  .masterContainerContacto {
-    .formulario {
-      width: 15rem;
-    }
-  }
-
-  .portfolioContainer .columna {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .portfolioContainer .content-container {
-    width: 45%;
-  }
-
-  .video-player {
-    width: 94%;
-    position: fixed;
-  }
-
-  .tituloVideos {
-    align-self: center;
-  }
-
-  .parrafoFooterContacto {
-    font-size: 8pt;
-    max-width: 20rem;
-  }
-
-  .ContainerFooterContacto {
-    width: 20rem;
-  }
-
-  .containerInterno04 {
-    grid-template-columns: none;
-  }
-}
-
 @media all and (max-width: 600px) {
-  .masterContainer {
-    display: grid;
-    grid-template-rows: 94px 575px 575px 575px 10% 195px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nav"
-      "bienvenida"
-      "resaltador01"
-      "resaltador02"
-      "barraContacto"
-      "footer";
-  }
-
-  .containerInterno06 {
-    grid-template-columns: 25rem;
-  }
-
-  .topbarContainer {
-    grid-template-columns: max-content 1fr;
-  }
-
   #siteid {
     padding: 0px 0px 0px 0px;
-  }
-
-  .nav {
-    margin-left: 0px;
   }
 
   .logoSiete {
     width: 70px;
   }
 
-  .listNav {
-    align-items: center;
-  }
-
-  .listNavItem {
-    margin: 0px 15px 0px 15px;
-  }
-
-  .textoBienvenida {
-    align-items: center;
-    margin: 0px 0px 0px 0px;
-  }
-
   .videoBienvenida {
     width: 355px;
-  }
-
-  .videoBienvenida01 {
-    width: 355px;
-  }
-
-  p {
-    text-align: center;
   }
 
   a {
@@ -237,20 +38,12 @@
     padding: 15px 0px 15px 0px;
   }
 
-  iframe {
-    width: 400px;
-  }
-
   .mexico {
     font-size: 14pt;
   }
 
   .titulo {
     text-align: center;
-  }
-
-  .cta02 {
-    width: 15em;
   }
 
   .portfolioContainer .content-container {
