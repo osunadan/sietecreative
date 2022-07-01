@@ -7,7 +7,7 @@
 .masterContainer {
   @include containerPrincipal(max-content max-content, 0px 40px);
   grid: {
-    template-rows: 10em 40em 40em 40em 10% max-content;
+    template-rows: 10em 40em 40em 40em 10rem max-content;
     template-areas: "nav nav" "bienvenida bienvenida"
       "resaltador01 resaltador01" "resaltador02 resaltador02"
       "barraContacto barraContacto" "footer footer";
@@ -39,7 +39,7 @@
 }
 
 .videoBienvenida {
-  width: 500px;
+  max-width: 500px;
 
   @media all and (max-width: 600px) {
     width: 20rem;
@@ -71,7 +71,6 @@
     template-rows: 1fr;
     template-columns: 1fr 1fr;
   }
-  background: rgb(233, 220, 180);
   background: linear-gradient(
     90deg,
     rgba(233, 220, 180, 1) 0%,
@@ -93,17 +92,17 @@
   .textoBarraContacto {
     @include flex(column, wrap, flex-start, flex-start);
     align-items: flex-start;
+  }
 
-    .cta02:link {
-      border: 1px solid map-get($colores, secundario);
-      border-radius: 5px;
-      color: white !important;
-      padding: 18px 15px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-weight: 100;
-    }
+  .cta02:link {
+    border: 1px solid map-get($colores, secundario);
+    border-radius: 5px;
+    color: white !important;
+    padding: 18px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 100;
 
     &:visited {
       @extend .cta02;
@@ -159,7 +158,7 @@
 .masterContainerNuestroTrabajo {
   @include containerPrincipal(none, 0px 40px);
   grid: {
-    template-rows: 7rem 35rem 60% 15rem 14rem;
+    template-rows: 7rem 35rem 60% 12rem 14rem;
     template-areas: "nav" "titulosTrabajos" "listaVideos" "barraContacto"
       "footer";
   }
@@ -284,7 +283,7 @@
 /* Pagina: Resultados*/
 .masterContainerResultados {
   @include containerPrincipal(max-content max-content, 0px 40px, 1fr);
-  grid-template-rows: 7rem 38rem 58rem 58rem 15rem max-content;
+  grid-template-rows: 7rem 38rem 58rem 58rem 12rem max-content;
   grid-template-areas:
     "nav nav"
     "titulosResultados titulosResultados"
@@ -327,7 +326,7 @@
 /* Pagina: Quienes somos*/
 .masterContainerQuienesSomos {
   @include containerPrincipal(22rem max-content, 0px 0px);
-  grid-template-rows: 7rem 60rem 15rem max-content;
+  grid-template-rows: 7rem 60rem 12rem max-content;
   grid-template-areas:
     "nav nav"
     "quienesSomos quienesSomos"

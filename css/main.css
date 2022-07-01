@@ -10,6 +10,7 @@ body {
   background-color: #f7f7f7;
   display: border-box;
   width: 100vw;
+  -webkit-text-size-adjust: auto;
 }
 
 /*Home Page*/
@@ -20,7 +21,7 @@ body {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 10em 40em 40em 40em 10% max-content;
+  grid-template-rows: 10em 40em 40em 40em 10rem max-content;
   grid-template-areas: "nav nav" "bienvenida bienvenida" "resaltador01 resaltador01" "resaltador02 resaltador02" "barraContacto barraContacto" "footer footer";
 }
 
@@ -59,7 +60,7 @@ body {
 }
 
 .videoBienvenida {
-  width: 500px;
+  max-width: 500px;
 }
 
 @media all and (max-width: 600px) {
@@ -111,7 +112,6 @@ body {
   grid-area: barraContacto;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  background: #e9dcb4;
   background: linear-gradient(90deg, #e9dcb4 0%, #ecc042 48%, #eed078 100%);
   width: 100vw;
 }
@@ -139,7 +139,7 @@ body {
   align-items: flex-start;
 }
 
-.barraContactoConteiner .textoBarraContacto .cta02:link, .barraContactoConteiner .textoBarraContacto .textoBarraContacto:link:visited, .barraContactoConteiner .textoBarraContacto .textoBarraContacto:link:hover {
+.barraContactoConteiner .cta02:link, .barraContactoConteiner .cta02:link:visited, .barraContactoConteiner .cta02:link:hover {
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   color: white !important;
@@ -150,7 +150,7 @@ body {
   font-weight: 100;
 }
 
-.barraContactoConteiner .textoBarraContacto:hover {
+.barraContactoConteiner .cta02:link:hover {
   color: #060606;
   background-color: #f7f7f7;
 }
@@ -215,7 +215,7 @@ body {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 7rem 35rem 60% 15rem 14rem;
+  grid-template-rows: 7rem 35rem 60% 12rem 14rem;
   grid-template-areas: "nav" "titulosTrabajos" "listaVideos" "barraContacto" "footer";
   align-content: inherit;
 }
@@ -377,7 +377,7 @@ body {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 7rem 38rem 58rem 58rem 15rem max-content;
+  grid-template-rows: 7rem 38rem 58rem 58rem 12rem max-content;
   grid-template-areas: "nav nav" "titulosResultados titulosResultados" "casoExito01 casoExito01" "casoExito02 casoExito02 " "barraContacto barraContacto" "footer footer";
 }
 
@@ -454,7 +454,7 @@ body {
   grid-gap: 0px 0px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 7rem 60rem 15rem max-content;
+  grid-template-rows: 7rem 60rem 12rem max-content;
   grid-template-areas: "nav nav" "quienesSomos quienesSomos" "barraContacto barraContacto" "footer footer";
 }
 
