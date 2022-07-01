@@ -7,7 +7,7 @@
 .masterContainer {
   @include containerPrincipal(max-content max-content, 0px 40px);
   grid: {
-    template-rows: 10em 40em 40em 40em 10rem max-content;
+    template-rows: 7rem 35rem 35rem 35rem 10rem max-content;
     template-areas: "nav nav" "bienvenida bienvenida"
       "resaltador01 resaltador01" "resaltador02 resaltador02"
       "barraContacto barraContacto" "footer footer";
@@ -30,6 +30,16 @@
   grid-area: nav;
   background-color: map-get($colores, "secundario");
   margin: 0;
+
+  .navbar-toggler {
+    border: transparent;
+
+    .navbar-toggler-icon {
+      background-image: url(../media/hamburger-icon_02.svg);
+      width: 1.8em;
+      height: 1.8em;
+    }
+  }
 }
 
 /* Mensaje de bienvenida */
@@ -206,7 +216,7 @@
   align-content: inherit;
 
   @media all and (max-width: 955px) {
-    grid-template-rows: 7rem 35rem 70% 15rem 14rem;
+    grid-template-rows: 7rem 35rem 70% 12rem 14rem;
     grid-template-areas:
       "nav"
       "titulosTrabajos"
@@ -300,6 +310,18 @@
   cursor: pointer;
 }
 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  cursor: pointer;
+
+  @media all and (max-width: 955px) {
+    width: 40px;
+  }
+}
+
 .video-player {
   @extend .play-btn;
   width: 60%;
@@ -332,14 +354,6 @@
 
 .video-player6 {
   @extend .video-player;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 70px;
-  cursor: pointer;
 }
 
 /* Pagina: Resultados*/
@@ -437,7 +451,7 @@
     "footer footer";
 
   @media all and (max-width: 955px) {
-    grid-template-rows: 7rem 80rem 15rem max-content;
+    grid-template-rows: 7rem 80rem 12rem max-content;
   }
 
   .containerInterno06 {
@@ -491,6 +505,10 @@
     padding: 1rem 5rem;
     border-radius: 1rem;
     display: flex;
+
+    @media all and (max-width: 425px) {
+      padding: 0rem 3rem;
+    }
 
     .formulario {
       display: flex;
@@ -566,6 +584,7 @@
   @media all and (max-width: 955px) {
     text-align: center;
     max-width: 22rem;
+    font-size: 18pt;
   }
 
   @keyframes up-to-down {
