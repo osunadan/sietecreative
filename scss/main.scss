@@ -265,11 +265,32 @@
   cursor: pointer;
   display: none;
   position: fixed;
+  z-index: 101;
 
   @media all and (max-width: 955px) {
     width: 94%;
     position: fixed;
   }
+}
+
+.video-player2 {
+  @extend .video-player;
+}
+
+.video-player3 {
+  @extend .video-player;
+}
+
+.video-player4 {
+  @extend .video-player;
+}
+
+.video-player5 {
+  @extend .video-player;
+}
+
+.video-player6 {
+  @extend .video-player;
 }
 
 .close-btn {

@@ -339,7 +339,7 @@ body {
   width: 300px;
 }
 
-.play-btn, .video-player {
+.play-btn, .video-player, .video-player2, .video-player3, .video-player4, .video-player5, .video-player6 {
   width: 70px;
   position: absolute;
   left: 50%;
@@ -348,15 +348,16 @@ body {
   cursor: pointer;
 }
 
-.video-player {
+.video-player, .video-player2, .video-player3, .video-player4, .video-player5, .video-player6 {
   width: 60%;
   cursor: pointer;
   display: none;
   position: fixed;
+  z-index: 101;
 }
 
 @media all and (max-width: 955px) {
-  .video-player {
+  .video-player, .video-player2, .video-player3, .video-player4, .video-player5, .video-player6 {
     width: 94%;
     position: fixed;
   }
