@@ -36,19 +36,48 @@
 .containerInterno01 {
   @include containerPrincipal(inherit, 30px, none);
   grid-area: bienvenida;
-}
 
-.videoBienvenida {
-  max-width: 500px;
+  a.cta {
+    background-color: map-get($colores, principal);
+    color: map-get($colores, secundario);
+    border-radius: 5px;
+    padding: 18px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    width: 12rem;
+    font-weight: map-get($fuentes, parrafo);
 
-  @media all and (max-width: 600px) {
-    width: 20rem;
-    justify-self: center;
+    &:link {
+      @extend a.cta;
+      background-color: map-get($colores, principal);
+    }
+
+    &:visited {
+      @extend a.cta;
+      background-color: #9a7b28;
+    }
+
+    &:hover {
+      background-color: map-get($colores, secundario);
+      color: map-get($colores, principal);
+      border: 1px solid #ecc042;
+    }
   }
-}
 
-.videoContenedor {
-  justify-self: center;
+  .videoContenedor {
+    justify-self: center;
+
+    .videoBienvenida {
+      max-width: 500px;
+
+      @media all and (max-width: 600px) {
+        width: 20rem;
+        justify-self: center;
+      }
+    }
+  }
 }
 
 /* Resaltador de la marca 01 */
@@ -94,15 +123,19 @@
     align-items: flex-start;
   }
 
-  .cta02:link {
+  .cta02 {
     border: 1px solid map-get($colores, secundario);
     border-radius: 5px;
     color: white !important;
-    padding: 18px 15px;
+    padding: 18px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-weight: 100;
+
+    &:link {
+      @extend .cta02;
+    }
 
     &:visited {
       @extend .cta02;
@@ -110,7 +143,7 @@
 
     &:hover {
       @extend .cta02;
-      color: map-get($colores, terciario);
+      color: map-get($colores, terciario) !important;
       background-color: map-get($colores, secundario);
     }
   }
@@ -130,8 +163,16 @@
     a.redsocial {
       color: map-get($colores, secundario) !important;
       text-decoration: underline;
-      padding: 0px 40px;
+      padding: 0px 18px;
       font-weight: 100;
+
+      &:visited {
+        color: #bdbdbd !important;
+      }
+
+      &:hover {
+        color: #ecc042 !important;
+      }
     }
   }
 
@@ -304,7 +345,7 @@
 /* Pagina: Resultados*/
 .masterContainerResultados {
   @include containerPrincipal(max-content max-content, 0px 40px, 1fr);
-  grid-template-rows: 7rem 38rem 58rem 58rem 12rem max-content;
+  grid-template-rows: 7rem 38rem 65rem 65rem 12rem max-content;
   grid-template-areas:
     "nav nav"
     "titulosResultados titulosResultados"
@@ -323,6 +364,14 @@
       "footer";
   }
 
+  @media all and (min-width: 768px) {
+    grid-template-rows: 7rem 38rem 75rem 55rem 12rem max-content;
+  }
+
+  @media all and (min-width: 955px) {
+    grid-template-rows: 7rem 38rem 55rem 55rem 12rem max-content;
+  }
+
   .containerInterno05 {
     @include containerPrincipal(inherit, 30px, none);
     grid-area: titulosResultados;
@@ -331,19 +380,52 @@
   .casoDeExitoContenedor01 {
     @include containerPrincipal(max-content max-content, 20px, none);
     grid-area: casoExito01;
+    height: 65rem;
+
+    @media all and (min-width: 768px) {
+      height: 75rem;
+    }
+
+    .textoCaso {
+      @include flex(column, nowrap, none, center);
+      align-items: center;
+    }
+
+    .videoBienvenida {
+      max-width: 500px;
+
+      @media all and (max-width: 600px) {
+        width: 20rem;
+        justify-self: center;
+      }
+    }
   }
 
   .casoDeExitoContenedor02 {
     @include containerPrincipal(max-content max-content, 20px, none);
     grid-area: casoExito02;
-  }
 
-  .textoCaso {
-    @include flex(column, nowrap, none, center);
-    align-items: center;
+    .videoBienvenida {
+      max-width: 500px;
+
+      @media all and (max-width: 600px) {
+        width: 20rem;
+        justify-self: center;
+      }
+    }
+
+    #video--Resultados__02 {
+      @media all and (max-width: 955px) {
+        order: -1;
+      }
+    }
+
+    .textoCaso {
+      @include flex(column, nowrap, none, center);
+      align-items: center;
+    }
   }
 }
-
 /* Pagina: Quienes somos*/
 .masterContainerQuienesSomos {
   @include containerPrincipal(22rem max-content, 0px 0px);
@@ -385,8 +467,7 @@
 
   .formularioContainer {
     grid-area: formulario;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, nowrap, none, none);
     align-items: center;
     width: 100%;
     height: 100%;
@@ -439,7 +520,15 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 15%;
+  height: 20%;
+
+  @media all and (min-width: 768px) {
+    height: 15%;
+  }
+
+  @media all and (max-height: 620px) {
+    height: 20%;
+  }
 
   .ContainerFooterContacto {
     display: flex;
@@ -460,7 +549,7 @@
       font-weight: map-get($fuentes, parrafo);
 
       @media all and (max-width: 955px) {
-        font-size: 8pt;
+        font-size: 11pt;
         max-width: 20rem;
       }
     }
@@ -470,7 +559,7 @@
 /* Estilos generales*/
 .titulo {
   font-weight: map-get($fuentes, titulo);
-  font-size: 20pt;
+  font-size: 24pt;
   animation: up-to-down 0.8s ease-out;
   overflow-y: hidden;
 
@@ -535,37 +624,4 @@ video {
 .illustracionContenedor {
   align-self: center;
   justify-self: center;
-}
-
-a.cta:link {
-  background-color: map-get($colores, terciario);
-  color: map-get($colores, secundario);
-  padding: 18px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  width: 12rem;
-  font-weight: map-get($fuentes, parrafo);
-
-  &:visited {
-    @extend a.cta:link;
-  }
-
-  &:hover {
-    @extend a.cta:link;
-    background-color: #4b4b4b;
-  }
-}
-
-a.redsocial {
-  font-size: 1rem;
-  font-weight: map-get($fuentes, bold);
-  text-decoration: none;
-  &:visited {
-    color: #676767;
-  }
-  &:link {
-    color: map-get($colores, terciario);
-  }
 }

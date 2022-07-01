@@ -7,7 +7,6 @@
 
 body {
   font-family: effra, sans-serif;
-  background-color: #f7f7f7;
   display: border-box;
   width: 100vw;
   -webkit-text-size-adjust: auto;
@@ -59,19 +58,46 @@ body {
   }
 }
 
-.videoBienvenida {
+.containerInterno01 a.cta, .containerInterno01 a.cta:link, .containerInterno01 a.cta:visited {
+  background-color: #ecc742;
+  color: #f7f7f7;
+  border-radius: 5px;
+  padding: 18px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  width: 12rem;
+  font-weight: 100;
+}
+
+.containerInterno01 a.cta:link {
+  background-color: #ecc742;
+}
+
+.containerInterno01 a.cta:visited {
+  background-color: #9a7b28;
+}
+
+.containerInterno01 a.cta:hover {
+  background-color: #f7f7f7;
+  color: #ecc742;
+  border: 1px solid #ecc042;
+}
+
+.containerInterno01 .videoContenedor {
+  justify-self: center;
+}
+
+.containerInterno01 .videoContenedor .videoBienvenida {
   max-width: 500px;
 }
 
 @media all and (max-width: 600px) {
-  .videoBienvenida {
+  .containerInterno01 .videoContenedor .videoBienvenida {
     width: 20rem;
     justify-self: center;
   }
-}
-
-.videoContenedor {
-  justify-self: center;
 }
 
 /* Resaltador de la marca 01 */
@@ -139,19 +165,19 @@ body {
   align-items: flex-start;
 }
 
-.barraContactoConteiner .cta02:link, .barraContactoConteiner .cta02:link:visited, .barraContactoConteiner .cta02:link:hover {
+.barraContactoConteiner .cta02, .barraContactoConteiner .cta02:link, .barraContactoConteiner .cta02:visited, .barraContactoConteiner .cta02:hover {
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   color: white !important;
-  padding: 18px 15px;
+  padding: 18px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-weight: 100;
 }
 
-.barraContactoConteiner .cta02:link:hover {
-  color: #060606;
+.barraContactoConteiner .cta02:hover {
+  color: #060606 !important;
   background-color: #f7f7f7;
 }
 
@@ -179,8 +205,16 @@ body {
 .footerContainer .socialMediaEnlaces a.redsocial, .footerContainerContacto .socialMediaEnlaces a.redsocial {
   color: #f7f7f7 !important;
   text-decoration: underline;
-  padding: 0px 40px;
+  padding: 0px 18px;
   font-weight: 100;
+}
+
+.footerContainer .socialMediaEnlaces a.redsocial:visited, .footerContainerContacto .socialMediaEnlaces a.redsocial:visited {
+  color: #bdbdbd !important;
+}
+
+.footerContainer .socialMediaEnlaces a.redsocial:hover, .footerContainerContacto .socialMediaEnlaces a.redsocial:hover {
+  color: #ecc042 !important;
 }
 
 .footerContainer .conclusion, .footerContainerContacto .conclusion {
@@ -378,7 +412,7 @@ body {
   grid-gap: 0px 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 7rem 38rem 58rem 58rem 12rem max-content;
+  grid-template-rows: 7rem 38rem 65rem 65rem 12rem max-content;
   grid-template-areas: "nav nav" "titulosResultados titulosResultados" "casoExito01 casoExito01" "casoExito02 casoExito02 " "barraContacto barraContacto" "footer footer";
 }
 
@@ -391,6 +425,18 @@ body {
 @media all and (max-width: 955px) {
   .masterContainerResultados {
     grid-template-areas: "nav" "titulosResultados" "casoExito01" "casoExito02 " "barraContacto" "footer";
+  }
+}
+
+@media all and (min-width: 768px) {
+  .masterContainerResultados {
+    grid-template-rows: 7rem 38rem 75rem 55rem 12rem max-content;
+  }
+}
+
+@media all and (min-width: 955px) {
+  .masterContainerResultados {
+    grid-template-rows: 7rem 38rem 55rem 55rem 12rem max-content;
   }
 }
 
@@ -416,11 +462,38 @@ body {
   align-content: center;
   justify-content: center;
   grid-area: casoExito01;
+  height: 65rem;
 }
 
 @media all and (max-width: 955px) {
   .masterContainerResultados .casoDeExitoContenedor01 {
     grid-template-columns: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .masterContainerResultados .casoDeExitoContenedor01 {
+    height: 75rem;
+  }
+}
+
+.masterContainerResultados .casoDeExitoContenedor01 .textoCaso {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-content: center;
+  align-items: center;
+}
+
+.masterContainerResultados .casoDeExitoContenedor01 .videoBienvenida {
+  max-width: 500px;
+}
+
+@media all and (max-width: 600px) {
+  .masterContainerResultados .casoDeExitoContenedor01 .videoBienvenida {
+    width: 20rem;
+    justify-self: center;
   }
 }
 
@@ -439,7 +512,24 @@ body {
   }
 }
 
-.masterContainerResultados .textoCaso {
+.masterContainerResultados .casoDeExitoContenedor02 .videoBienvenida {
+  max-width: 500px;
+}
+
+@media all and (max-width: 600px) {
+  .masterContainerResultados .casoDeExitoContenedor02 .videoBienvenida {
+    width: 20rem;
+    justify-self: center;
+  }
+}
+
+@media all and (max-width: 955px) {
+  .masterContainerResultados .casoDeExitoContenedor02 #video--Resultados__02 {
+    order: -1;
+  }
+}
+
+.masterContainerResultados .casoDeExitoContenedor02 .textoCaso {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -518,6 +608,9 @@ body {
   grid-area: formulario;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-content: none;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -574,7 +667,19 @@ body {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 15%;
+  height: 20%;
+}
+
+@media all and (min-width: 768px) {
+  .footerContainerContacto {
+    height: 15%;
+  }
+}
+
+@media all and (max-height: 620px) {
+  .footerContainerContacto {
+    height: 20%;
+  }
 }
 
 .footerContainerContacto .ContainerFooterContacto {
@@ -601,7 +706,7 @@ body {
 
 @media all and (max-width: 955px) {
   .footerContainerContacto .ContainerFooterContacto .parrafoFooterContacto {
-    font-size: 8pt;
+    font-size: 11pt;
     max-width: 20rem;
   }
 }
@@ -609,7 +714,7 @@ body {
 /* Estilos generales*/
 .titulo {
   font-weight: 400;
-  font-size: 20pt;
+  font-size: 24pt;
   animation: up-to-down 0.8s ease-out;
   overflow-y: hidden;
 }
@@ -684,34 +789,4 @@ video {
 .illustracionContenedor {
   align-self: center;
   justify-self: center;
-}
-
-a.cta:link, a.cta:link:visited, a.cta:link:hover {
-  background-color: #060606;
-  color: #f7f7f7;
-  padding: 18px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  width: 12rem;
-  font-weight: 100;
-}
-
-a.cta:hover:link {
-  background-color: #4b4b4b;
-}
-
-a.redsocial {
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-a.redsocial:visited {
-  color: #676767;
-}
-
-a.redsocial:link {
-  color: #060606;
 }
