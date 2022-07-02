@@ -482,7 +482,7 @@
 /* Pagina: Contacto*/
 .masterContainerContacto {
   @include containerPrincipal(max-content, 40px, 1fr);
-  grid-template-rows: 7rem 85rem;
+  grid-template-rows: 7rem 90rem;
   grid-template-areas:
     "nav"
     "formulario";
