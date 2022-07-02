@@ -417,7 +417,13 @@ body {
 @media all and (max-width: 955px) {
   .video-player, .video-player2, .video-player3, .video-player4, .video-player5, .video-player6 {
     width: 94%;
-    position: fixed;
+  }
+}
+
+@media all and (max-height: 600px) {
+  .video-player, .video-player2, .video-player3, .video-player4, .video-player5, .video-player6 {
+    width: 70%;
+    top: 255px;
   }
 }
 
@@ -490,6 +496,12 @@ body {
 @media all and (min-width: 768px) {
   .masterContainerResultados .casoDeExitoContenedor01 {
     height: 75rem;
+  }
+}
+
+@media all and (max-height: 600px) {
+  .masterContainerResultados .casoDeExitoContenedor01 {
+    height: 68rem;
   }
 }
 
@@ -610,7 +622,7 @@ body {
   grid-gap: 40px;
   align-content: center;
   justify-content: center;
-  grid-template-rows: 7rem 90rem;
+  grid-template-rows: 7rem 85rem;
   grid-template-areas: "nav" "formulario";
 }
 
@@ -698,9 +710,9 @@ body {
   }
 }
 
-@media all and (max-height: 620px) {
+@media all and (max-height: 680px) {
   .footerContainerContacto {
-    height: 20%;
+    display: none;
   }
 }
 

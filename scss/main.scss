@@ -332,7 +332,11 @@
 
   @media all and (max-width: 955px) {
     width: 94%;
-    position: fixed;
+  }
+
+  @media all and (max-height: 600px) {
+    width: 70%;
+    top: 255px;
   }
 }
 
@@ -398,6 +402,10 @@
 
     @media all and (min-width: 768px) {
       height: 75rem;
+    }
+
+    @media all and (max-height: 600px) {
+      height: 68rem;
     }
 
     .textoCaso {
@@ -474,7 +482,7 @@
 /* Pagina: Contacto*/
 .masterContainerContacto {
   @include containerPrincipal(max-content, 40px, 1fr);
-  grid-template-rows: 7rem 90rem;
+  grid-template-rows: 7rem 85rem;
   grid-template-areas:
     "nav"
     "formulario";
@@ -544,8 +552,8 @@
     height: 15%;
   }
 
-  @media all and (max-height: 620px) {
-    height: 20%;
+  @media all and (max-height: 680px) {
+    display: none;
   }
 
   .ContainerFooterContacto {
